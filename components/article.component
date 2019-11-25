@@ -1,0 +1,40 @@
+<template>
+    <div class="grid" order="2">
+        {{> header }}
+        {{> sidebar}}
+        <div id="grid-main">
+            <h2>Photography</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard
+                dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                make a type specimen
+                book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially
+                unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                Ipsum passages, and more
+                recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+        <div id="grid-contact">
+            <hr />
+            <h4>I'm always open for commissions and collaborations. Drop me a line:</h4>
+            <p class="contact-method">937 846 4465</p>
+            <p class="contact-method">email</p>
+            <p class="contact-method">github</p>
+            <hr />
+        </div>
+        <div id="grid-splash">
+            <h1>TODO</h1>
+            <p>Image with block text overtop like in template 2</p>
+        </div>
+    </div>
+
+</template>
+
+<style lang="scss">
+    h1 {
+        background: orange;
+    }
+</style>
+
+<script></script>

@@ -1,0 +1,11 @@
+<template>
+    <h3 id="logo">Matt Hall</h3>
+</template>
+
+<style lang="scss">
+    h3#logo {
+        color: #e7e7e7;
+    }
+</style>
+
+<script></script>

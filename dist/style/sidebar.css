@@ -1,0 +1,11 @@
+#menu {
+  grid-row: header;
+  grid-column: menu; }
+
+#grid-sidebar {
+  grid-row: start / span 2;
+  grid-column: menu;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-weight: 500;
+  text-transform: uppercase; }

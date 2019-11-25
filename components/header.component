@@ -1,0 +1,13 @@
+<template include="logo,links">
+    <header id="grid-header">Header</header>
+
+
+</template>
+
+<style lang="scss">
+    header {
+        display: flex;
+    }
+</style>
+
+<script></script>

@@ -1,0 +1,17 @@
+<template>
+    <ul>
+        <li>About</li>
+        <li>Contact</li>
+
+    </ul>
+</template>
+
+<style lang="scss">
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+
+<script></script>
