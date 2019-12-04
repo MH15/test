@@ -1,0 +1,15 @@
+
+    <div id="card-container">
+    {% set images = [{name: "a bunch of shit", url:"https://images.unsplash.com/photo-1569271836752-ed9351b75521?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"}, {name: "boiiii", url: "https://images.unsplash.com/photo-1575107000940-6bbe2c704c1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"}, {name: "cockbiter", url: "https://images.unsplash.com/photo-1574849858697-d7db11234e78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"}] %}
+
+    {% for image in images %}
+    <div class="card">
+        <div class="image" style="background-image: url({{ image.url }});"></div>
+        <div class="text">
+            <h2>{{image.name}}</h2>
+        </div>
+    </div>
+    {% else %}
+    Nothing here
+    {% endfor %}
+    </div>

@@ -1,0 +1,61 @@
+<template include="page,carousel">
+    {% set order = 2 %}
+    {% extends "page.njk" %}
+    {% block header %}Home{% endblock %}
+    {% block main %}
+    <div id="grid-intro">
+        <h2>I'm a computer scientist and artist with a background in web development.</h2>
+        <p>I'm currently a student at <a href="https://osu.edu">the Ohio State University</a> completing my undergraduate degree in Computer Science with a focus on graphics and art. Some stuff about ACCAD and the work I do there. Stuff about 3D graphics and art. Part about Photography. Offscreen, I climb, bike and run.
+    
+        </p>
+        <div id="contact">
+            <hr />
+            <h4>I'm always open for commissions and collaborations. Drop me a line:</h4>
+            <p class="contact-method">937 846 4465</p>
+            <p class="contact-method">email</p>
+            <p class="contact-method">github</p>
+            <hr />
+        </div>
+    </div>
+    
+    <div id="grid-carousel">
+        {% include "carousel.njk" %}
+    </div>
+    {% endblock %}
+</template>
+
+<style lang="scss">
+    #carousel {
+        overflow: hidden;
+    }
+    div#home-grid {
+        height: 100%;
+        width: 100%;
+    }
+    
+    #grid-intro {
+        grid-column: main;
+        grid-row: body;
+
+        h2 {
+            margin-top: 0;
+            font-family: "Spectral", serif;
+            font-weight: 600;
+        }
+
+    }
+    #grid-contact {
+        h4 {
+            margin-top: 0;
+            font-family: "Spectral", serif;
+            font-weight: 600;
+        }
+    }
+
+    #grid-carousel {
+        grid-column: splash;
+        grid-row: 1 / 3;
+    }
+</style>
+
+<script></script>

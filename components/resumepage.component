@@ -1,0 +1,14 @@
+<template include="page">
+    {% set order = 3 %}
+    {% extends "page.njk" %}
+    {% block header %}Resume{% endblock %}
+    {% block main %}TODO: Resumes{% endblock %}
+</template>
+
+<style lang="scss">    
+h1 {
+    background: orange;
+}
+</style>
+
+<script></script>

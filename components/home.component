@@ -1,74 +1,21 @@
-<template include="header,sidebar,article,resume">
+<template include="homepage,resumepage,projectspage">
     <div id="container">
-        {{> resume }}
-        {{> article }}
-        <div class="grid" order="1">
-            {{> header }}
-            {{> sidebar}}
-            <div id="grid-main">
-                <h2>I'm an artist and computer scientist with a background in web development.</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard
-                    dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                    make a type specimen
-                    book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                    remaining essentially
-                    unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-                    Ipsum passages, and more
-                    recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
-            </div>
-            <div id="grid-contact">
-                <hr />
-                <h4>I'm always open for commissions and collaborations. Drop me a line:</h4>
-                <p class="contact-method">937 846 4465</p>
-                <p class="contact-method">email</p>
-                <p class="contact-method">github</p>
-                <hr />
-            </div>
-            <div id="grid-splash">
-                <h1>TODO</h1>
-                <p>Image with block text overtop like in template 2</p>
-            </div>
-        </div>
+        {% include "homepage.njk" %}
+        {% include "projectspage.njk" %}
+        {% include "resumepage.njk" %}
 
     </div>
 </template>
 
 <style lang="scss">
-    @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i,900|Spectral:300,400,500,600,700,800&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Source+Sans+Pro:400,400i,700,700i,900|Spectral:300,400,500,600,700,800|Solway:300,400,500,700,800&display=swap');
 
-    div.grid {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: grid;
-        grid-template-columns: [menu] 55px [start] 50px [main] 3fr [contact] 2fr [splash] 5fr;
-        grid-template-rows: [header] 55px [start] 50px [body] 90fr;
-        transform-origin: 100% 0;
-
-        background: #e7e7e7;
-        border-radius: 8px;
-        box-shadow: 0 0 19px rgba(0, 0, 0, 0.5);
-
-        transition: all ease 200ms;
-
-        &:hover {
-            box-shadow: 0 0 19px 5px rgba(0, 0, 0, 0.5);
-        }
-    }
 
     div.grid[order="1"] {
         background: rgb(163, 147, 147);
         color: #1d2a32
     }
 
-    #grid-header {
-        grid-column: start / span 4;
-        grid-row: header;
-    }
 
     #grid-main {
         grid-column: main;
@@ -108,19 +55,28 @@
         padding: 0;
         height: 100%;
         font-family: 'Spectral', serif;
-        font-family: 'Source Sans Pro', sans-serif;
+        font-family: 'Solway', sans-serif;
         overflow: hidden;
         background: black;
     }
 
+    h2,h3,h4,h5,h6{
+        font-family: 'Spectral', serif;
+    }
     h1 {
-        background: orange;
+        
+    }
+    a {
+        color: inherit;
+    }
+    p{
+        line-height: 1.5;
     }
 </style>
 
 <script>
     let menu, bounds
-    let pages = document.querySelectorAll(".grid")
+    let pages = document.querySelectorAll(".page")
     let right, bottom
     console.log(pages)
     let range = 40

@@ -1,6 +1,6 @@
 
     let menu, bounds
-    let pages = document.querySelectorAll(".grid")
+    let pages = document.querySelectorAll(".page")
     let right, bottom
     console.log(pages)
     let range = 40

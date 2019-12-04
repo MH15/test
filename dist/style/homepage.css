@@ -1,0 +1,23 @@
+#carousel {
+  overflow: hidden; }
+
+div#home-grid {
+  height: 100%;
+  width: 100%; }
+
+#grid-intro {
+  grid-column: main;
+  grid-row: body; }
+  #grid-intro h2 {
+    margin-top: 0;
+    font-family: "Spectral", serif;
+    font-weight: 600; }
+
+#grid-contact h4 {
+  margin-top: 0;
+  font-family: "Spectral", serif;
+  font-weight: 600; }
+
+#grid-carousel {
+  grid-column: splash;
+  grid-row: 1 / 3; }

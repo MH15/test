@@ -1,0 +1,24 @@
+
+    {% set order = 2 %}
+    {% extends "page.njk" %}
+    {% block header %}Home{% endblock %}
+    {% block main %}
+    <div id="grid-intro">
+        <h2>I'm a computer scientist and artist with a background in web development.</h2>
+        <p>I'm currently a student at <a href="https://osu.edu">the Ohio State University</a> completing my undergraduate degree in Computer Science with a focus on graphics and art. Some stuff about ACCAD and the work I do there. Stuff about 3D graphics and art. Part about Photography. Offscreen, I climb, bike and run.
+    
+        </p>
+        <div id="contact">
+            <hr/>
+            <h4>I'm always open for commissions and collaborations. Drop me a line:</h4>
+            <p class="contact-method">937 846 4465</p>
+            <p class="contact-method">email</p>
+            <p class="contact-method">github</p>
+            <hr/>
+        </div>
+    </div>
+    
+    <div id="grid-carousel">
+        {% include "carousel.njk" %}
+    </div>
+    {% endblock %}
