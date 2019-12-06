@@ -14,6 +14,11 @@
             "method": "GET",
             "path": "/",
             "controller": "Home.index"
+        },
+        {
+            "method": "GET",
+            "path": "/project/:link",
+            "controller": "Projects.get"
         }
     ]
 }

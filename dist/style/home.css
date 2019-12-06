@@ -3,6 +3,15 @@ div.grid[order="1"] {
   background: #a39393;
   color: #1d2a32; }
 
+#mobileMenu {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 10000; }
+  @media (min-width: 740px) {
+    #mobileMenu {
+      display: none; } }
+
 #grid-main {
   grid-column: main;
   grid-row: body; }

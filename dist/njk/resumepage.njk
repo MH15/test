@@ -2,4 +2,27 @@
     {% set order = 3 %}
     {% extends "page.njk" %}
     {% block header %}Resume{% endblock %}
-    {% block main %}TODO: Resumes{% endblock %}
+    {% block main %}
+    <div id="grid-resume">
+        <h2>Education</h2>
+        <p><b>The Ohio State University</b> - <i>BS, Computer Science</i></p>
+        <p><b>Centerville City Schools</b> - <i>Engineering Block Program</i></p>
+        <h2>Professional Experience</h2>
+        <p><b>P.C. Krause & Associates</b> - <i>Research Intern, Contractor - Wright-Patterson AFB, RQQI</i></p>
+        <ul>
+            <li>Validated three-phase Delta and Wye AC motors to increase system integrity on a Simulink model of a hybriddrone system.  Designed and ran experiments to gather data and calculate constants for System Identification.</li>
+        </ul>
+        <p><b>Air Force Research Lab</b> - <i>Research Intern, Wright Scholars - Wright-Patterson AFB</i></p>
+        <ul>
+            <li>Researched fuel-cooled avionics systems and developed MATLAB software to validate thermal controls models.Measured and controled analog and digital signals with dSPACE data acquisition hardware for an experimentalwater-based fuel thermal management system (FTMS).</li>
+            <li>Constructed a fault detection and mitigation algorithm in Simulink software, applied through dSPACE hardware,that allowed for automated isolation of fluid flow and pressure faults.</li>
+        </ul>
+        <h2>Relevant Experiences</h2>
+        <p><b>Networked Augmented Reality Prototype</b> - <i>August 2019 to present</i></p>
+        <p>Worked  with  a  team  of  faculty  and  graduate  students  to  develop  a  multiplayer  Augmented  Reality  (AR)experience in Unity3D and Vuforia to run on mobile phones in a room-scale interactive environment.</p>
+        <p><b>HackOHI/O Handwritten Equation Editor App</b> - <i>October 2018</i></p>
+        <p>Developed a mobile app (React Native, iOS) allowing students to hand write solutions to online math home-work instead of typing in the equation editor.  Built over 36 hours during HackOHI/O, Ohio State's premier hackathon.</p>
+        <p><b>Warehouse Automation Research Platform</b> - <i>December 2018 to April 2019</i></p>
+        <p>Lead  electronics  and  software  designer  for  the  development  of  a  prototype  omnidirectional  robot  chassismodeled after NASAs Lunar Electric Rover for warehouse inventory transport solutions.  Utilized on-campusmachining  resources  and  industry  standard  parts  to  develop  chassis  concept.   Implemented  simultaneousacceleration and velocity control of multiple stepper motors and servos on an Arduino platform.</p>
+    </div>
+    {% endblock %}

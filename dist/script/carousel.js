@@ -1,7 +1,6 @@
 
     let cardContainer = document.querySelector("#card-container")
     let cards = cardContainer.querySelectorAll(".card")
-    console.log(cards)
     let cstate = {
         height: window.innerHeight,
         current: 0,
@@ -14,7 +13,6 @@
 
     scaleCards()
 
-    console.log(cstate)
     window.setInterval(()=> {
         updateCardState()
         changeCard(cstate.current)
@@ -23,7 +21,6 @@
     function changeCard(current) {
         let top = -(cstate.height-80)*current + 40
         let styleString = `${top}px`
-        console.log(styleString)
         cardContainer.style.top = styleString
         scaleCards()
     }

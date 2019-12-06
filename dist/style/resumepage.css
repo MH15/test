@@ -1,2 +1,8 @@
-h1 {
-  background: orange; }
+#grid-resume {
+  grid-column: 3/5;
+  grid-row: body;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 80px; }
+  #grid-resume h2, #grid-resume h3 {
+    font-family: 'Solway', sans-serif; }
