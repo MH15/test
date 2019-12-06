@@ -121,53 +121,55 @@
     })
 
 
+    document.addEventListener('mousemove', (e) => {
+        pages.forEach((page) => {
+            let order = page.getAttribute("order")
+            // console.log(order)
+            if (order == 1) {
+                menu = page.querySelector("#menu")
+                bounds = menu.getBoundingClientRect()
+                right = bounds.right
+                bottom = bounds.bottom
+            } else {
+                page.style.cursor = "pointer"
+            }
+
+            let { clientX, clientY } = e
+            let deltaX = clientX - right
+            let deltaY = clientY - bottom
+            let closest = Math.max(deltaY, deltaX)
+
+            let dist = Math.sqrt(deltaX * deltaX + deltaY * deltaY)
+            // console.log(range - closest)
+            let control = range - closest
+            if (control < 0) {
+                control = 0
+            }
+            // console.log(control, locked)
+
+            // TODO: unlock when mouseover active card
+            if (control > lock) {
+                locked = true
+            }
+
+            if (!locked) {
+                uniqueControl = control * (pages.length - order)
+                let styleString = `translate(${uniqueControl * 1.25}px,${uniqueControl * .75}px) rotate(${-uniqueControl / 18}deg)`
+
+                page.style.transform = styleString
+            } else {
+                if (range - closest <= -lock * 2) {
+                    locked = false
+                }
+            }
+
+        })
+    });
+
 
     if(window.innerWidth > 740) {
         console.log("NOT")
-        document.addEventListener('mousemove', (e) => {
-            pages.forEach((page) => {
-                let order = page.getAttribute("order")
-                // console.log(order)
-                if (order == 1) {
-                    menu = page.querySelector("#menu")
-                    bounds = menu.getBoundingClientRect()
-                    right = bounds.right
-                    bottom = bounds.bottom
-                } else {
-                    page.style.cursor = "pointer"
-                }
-
-                let { clientX, clientY } = e
-                let deltaX = clientX - right
-                let deltaY = clientY - bottom
-                let closest = Math.max(deltaY, deltaX)
-
-                let dist = Math.sqrt(deltaX * deltaX + deltaY * deltaY)
-                // console.log(range - closest)
-                let control = range - closest
-                if (control < 0) {
-                    control = 0
-                }
-                // console.log(control, locked)
-
-                // TODO: unlock when mouseover active card
-                if (control > lock) {
-                    locked = true
-                }
-
-                if (!locked) {
-                    uniqueControl = control * (pages.length - order)
-                    let styleString = `translate(${uniqueControl * 1.25}px,${uniqueControl * .75}px) rotate(${-uniqueControl / 18}deg)`
-
-                    page.style.transform = styleString
-                } else {
-                    if (range - closest <= -lock * 2) {
-                        locked = false
-                    }
-                }
-
-            })
-        });
+        
     } else {
         console.log("MOBILE")
         // mobile

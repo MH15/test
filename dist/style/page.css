@@ -11,7 +11,14 @@ div.page {
   background: #e7e7e7;
   border-radius: 8px;
   box-shadow: 0 0 19px rgba(0, 0, 0, 0.5);
-  transition: all ease 200ms; }
+  transition: all ease 200ms;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent; }
   div.page:hover {
     box-shadow: 0 0 19px 5px rgba(0, 0, 0, 0.5); }
 
