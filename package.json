@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "framework": "0.0.0",
-    "spacecobra": "^2.2.0"
+    "neanderthal": "0.0.1"
   }
 }

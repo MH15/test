@@ -1,11 +1,11 @@
 /**
  * This is the starting point for your app.
  */
-const { Framework } = require("spacecobra")
+const { Framework } = require("neanderthal")
 
-global.fra = new Framework(__dirname, true)
+global.app = new Framework(__dirname, true)
 
-// console.log(fra)
+console.log(app)
 
 
 
@@ -13,12 +13,16 @@ global.fra = new Framework(__dirname, true)
 
 var hrstart = process.hrtime()
 
-fra.buildAllComponents()
+// app.buildAllComponents()
+
+// renderComponent
 
 
 hrend = process.hrtime(hrstart)
 console.info('Execution time (hr): %ds %dms', hrend[0], hrend[1] / 1000000)
 
-console.log(fra.render)
+// console.log(app.render)
 
-fra.serve(8000)
+
+
+// app.serve(8000)

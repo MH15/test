@@ -1,0 +1,13 @@
+<template>
+    <h1>
+        <slot>Default Slot content</slot>
+    </h1>
+</template>
+
+<style lang="scss">    
+h1 {
+    background: transparent;
+}
+</style>
+
+<script></script>

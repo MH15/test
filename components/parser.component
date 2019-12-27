@@ -1,0 +1,16 @@
+<template include="FancyHeader">
+    <h1>Normal Header</h1>
+    <FancyHeader>Fancy Header</FancyHeader>
+    <UnbalancedTag id="a" />
+    <!--Here's a comment-->
+
+</template>
+<style lang="sass">
+    h1 {
+        background: orange;
+    }
+</style>
+<script>
+</script>
+
+</html>

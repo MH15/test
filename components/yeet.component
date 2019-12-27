@@ -1,0 +1,109 @@
+<template>
+    <div id="Rolodex">
+        <Header id="header" />
+        <transition name="fade">
+            <div id="inspector">
+                <slot name="Edit" v-if="inspectorSelector(0)"></slot>
+                <slot name="Page" v-if="inspectorSelector(1)"></slot>
+                <slot name="Theme" v-if="inspectorSelector(2)"></slot>
+                <slot name="Launch" v-if="inspectorSelector(3)"></slot>
+            </div>
+        </transition>
+        <div id="icon-footer-row">
+            <div class="footer-icon" @click="$store.commit('ui/toggleAddMenu')">
+                <plus-icon class="sub-icon" />
+            </div>
+            <div class="footer-icon">
+                <undo-icon class="sub-icon" />
+            </div>
+            <div class="footer-icon">
+                <redo-icon class="sub-icon" />
+            </div>
+            <div class="footer-icon">
+                <delete-outline-icon class="sub-icon" />
+            </div>
+        </div>
+        <Add v-if="showAddMenu" />
+    </div>
+</template>
+
+<script>
+    // Import components 
+    import Header from './Compound/Header.vue';
+    import PlusIcon from 'vue-material-design-icons/Plus.vue';
+    import UndoIcon from 'vue-material-design-icons/Undo.vue';
+    import RedoIcon from 'vue-material-design-icons/Redo.vue';
+    import DeleteOutlineIcon from 'vue-material-design-icons/DeleteOutline.vue';
+    import Add from './Workspaces/Add.vue'
+    export default {
+        name: 'Rolodex',
+        components: {
+            Header,
+            PlusIcon,
+            UndoIcon,
+            RedoIcon,
+            DeleteOutlineIcon,
+            Add
+        },
+        props: {
+            name: String
+        },
+        data: function () {
+            return {
+                workspace: 0,
+                renderEdit: true,
+                renderPage: false,
+                renderTheme: false,
+                renderLaunch: false,
+                showModal: false
+            }
+        },
+        computed: {
+            showAddMenu() {
+                return this.$store.state.ui.showAddMenu
+            }
+        },
+        methods: {
+            inspectorSelector: function (id) {
+                return this.$store.state.ui.inspector === id
+            }
+        }
+    }
+</script>
+
+<style lang="sass" scoped>
+    #Rolodex {
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 100%;
+        background: #262626;
+        color: #afafaf;
+        box-shadow: 0px 0px 6px #858585;
+    }
+
+    .scroll {
+        height: 100%;
+    }
+
+    Add {
+        width: 300px;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 100;
+    }
+
+    #inspector {
+        flex: 1;
+    }
+
+    #icon-footer-row {
+        display: flex;
+        justify-content: space-around;
+    }
+</style>
