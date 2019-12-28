@@ -1,13 +1,14 @@
 <template>
     <h1>
+        Checker
         <slot>Default Slot content</slot>
     </h1>
 </template>
 
-<style lang="scss">    
-h1 {
-    background: transparent;
-}
+<style lang="scss">
+    h1 {
+        background: transparent;
+    }
 </style>
 
 <script></script>

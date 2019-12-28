@@ -1,7 +1,10 @@
 <template include="FancyHeader">
     <h1>Normal Header</h1>
     <FancyHeader>Fancy Header</FancyHeader>
-    <UnbalancedTag id="a" />
+    <div>
+        <UnbalancedTag id="a" />
+        <h1>yeeee</h1>
+    </div>
     <!--Here's a comment-->
 
 </template>
@@ -9,8 +12,12 @@
     h1 {
         background: orange;
     }
+
+    body {
+        background: white;
+    }
 </style>
 <script>
+    console.log("ya")
+    let v = 3
 </script>
-
-</html>

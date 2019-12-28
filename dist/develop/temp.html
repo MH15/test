@@ -1,234 +1,29 @@
-<html><head><title>Test</title></head><body>
+<html><head><title>Test</title></head><body><h1>
+Normal Header
+</h1>
+<FancyHeader>
+Fancy Header
+</FancyHeader>
+<div>
+<UnbalancedTag id="a"/>
+<h1>
+  yeeee
+</h1>
+</div>
+<!--Here's a comment-->
+<style>h1 {
+        background: orange;
+    }
 
-    <div class="page" order="1">
-        <header id="grid-header">
-            <div>
-            Home
-            </div>
-        </header>
-        
-    <div id="menu">01</div>
-    <div id="grid-sidebar">
-        <div id="branding">Matt Hall</div>
-    </div>
-
-        
-        
-    <div id="grid-intro">
-        <h2>I'm a computer scientist and artist with a background in web development.</h2>
-        <p>I'm currently a student at <a href="https://osu.edu">the Ohio State University</a> completing my undergraduate degree in Computer Science with a focus on graphics and art. Some stuff about ACCAD and the work I do there. Stuff about 3D graphics and art. Part about Photography. Offscreen, I climb, bike and run.
-    
-        </p>
-        <div id="contact">
-            <hr/>
-            <h4>I'm always open for commissions and collaborations. Drop me a line:</h4>
-            <p class="contact-method">937 846 4465</p>
-            <p class="contact-method">email</p>
-            <p class="contact-method">github</p>
-            <hr/>
-        </div>
-    </div>
-    
-    <div id="grid-carousel">
-        
-    <div id="card-container">
-    
-
-    
-    <div class="card">
-        <div class="image" style="background-image: url(https://images.unsplash.com/photo-1569271836752-ed9351b75521?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80);"></div>
-        <div class="text">
-            <h2>a bunch of shit</h2>
-        </div>
-    </div>
-    
-    <div class="card">
-        <div class="image" style="background-image: url(https://images.unsplash.com/photo-1575107000940-6bbe2c704c1d?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=675&amp;q=80);"></div>
-        <div class="text">
-            <h2>boiiii</h2>
-        </div>
-    </div>
-    
-    <div class="card">
-        <div class="image" style="background-image: url(https://images.unsplash.com/photo-1574849858697-d7db11234e78?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=675&amp;q=80);"></div>
-        <div class="text">
-            <h2>cockbiter</h2>
-        </div>
-    </div>
-    
-    </div>
-
-    </div>
-    
-
-    </div>
-<style>#carousel {
-  overflow: hidden; }
-
-div#home-grid {
-  height: 100%;
-  width: 100%; }
-
-#grid-intro {
-  grid-column: main;
-  grid-row: body;
-  overflow-y: auto; }
-  @media (max-width: 740px) {
-    #grid-intro {
-      grid-column: main/7;
-      padding-right: 80px; } }
-  #grid-intro h2 {
-    margin-top: 0;
-    font-family: "Spectral", serif;
-    font-weight: 600; }
-
-#grid-contact h4 {
-  margin-top: 0;
-  font-family: "Spectral", serif;
-  font-weight: 600; }
-
-#grid-carousel {
-  grid-column: splash;
-  grid-row: 1 / 3; }
-  @media (max-width: 740px) {
-    #grid-carousel {
-      display: none; } }
-div.page {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: [menu] 55px [start] 50px [main] 4fr [splash] 7fr;
-  grid-template-rows: [header] 55px [start] 50px [body] 90fr;
-  transform-origin: 100% 0;
-  background: #e7e7e7;
-  border-radius: 8px;
-  box-shadow: 0 0 19px rgba(0, 0, 0, 0.5);
-  transition: all ease 200ms;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent; }
-  div.page:hover {
-    box-shadow: 0 0 19px 5px rgba(0, 0, 0, 0.5); }
-
-#grid-header {
-  align-self: center;
-  grid-column: start / span 4;
-  grid-row: header;
-  font-size: 20px;
-  display: flex;
-  font-family: 'Bebas Neue', cursive; }
-
-#grid-main {
-  grid-column: main;
-  grid-row: body; }
-  #grid-main h2 {
-    margin-top: 0;
-    font-family: "Spectral", serif;
-    font-weight: 600; }
-#menu {
-  grid-row: header;
-  grid-column: menu;
-  font-family: 'Bebas Neue', cursive;
-  text-align: center;
-  align-self: center;
-  font-size: 17px; }
-
-#grid-sidebar {
-  font-family: 'Bebas Neue', cursive;
-  grid-row: start / span 2;
-  grid-column: menu;
-  font-size: 20px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  justify-self: center; }
-  #grid-sidebar #branding {
-    writing-mode: vertical-rl;
-    text-orientation: mixed; }
-#card-container {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  top: 40px;
-  transition: top ease 300ms; }
-
-* {
-  box-sizing: border-box; }
-
-.card {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 200ms ease; }
-  .card .image {
-    background: white;
-    width: 55vh;
-    height: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    background-size: cover; }
-  .card .text {
-    display: none; }
-  .card.scaled {
-    transform: scale(0.9); }
-
-body, html {
-  padding: 0;
-  margin: 0;
-  background: #e7e7e7;
-  height: 100%;
-  width: 100%;
-  overflow: hidden; }
+    body {
+        background: white;
+    }
 
 h1 {
-  background: orange; }
-</style><script>
-    let cardContainer = document.querySelector("#card-container")
-    let cards = cardContainer.querySelectorAll(".card")
-    let cstate = {
-        height: window.innerHeight,
-        current: 0,
-        speed: 5000
-    }
-    // cstate.height = 650
-    cards.forEach(card => {
-        card.style.height = cstate.height - 80+"px"
-    })
-
-    scaleCards()
-
-    window.setInterval(()=> {
-        updateCardState()
-        changeCard(cstate.current)
-    }, cstate.speed)
-
-    function changeCard(current) {
-        let top = -(cstate.height-80)*current + 40
-        let styleString = `${top}px`
-        cardContainer.style.top = styleString
-        scaleCards()
+        background: transparent;
     }
 
-    function scaleCards() {
-        cards.forEach(card => {
-            card.classList.toggle("scaled",Array.from(card.parentNode.children).indexOf(card) !== cstate.current)
-        })
-
-    }
-
-    function updateCardState() {
-        if (cstate.current < cards.length - 1) {
-            cstate.current += 1
-        } else {
-            cstate.current = 0
-        }
-    }
+</style><script>console.log("ya")
+    let v = 3
 
 </script></body></html>
