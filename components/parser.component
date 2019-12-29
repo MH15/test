@@ -1,6 +1,8 @@
-<template include="FancyHeader">
-    <h1>Normal Headers</h1>
+<template include="FancyHeader,test">
+    <h1>Normal Headers {{ test }}</h1>
     <FancyHeader>Fancy Header</FancyHeader>
+    <FancyHeader>Fancy Header {{ ha.alphaa }}</FancyHeader>
+    <test />
     <div>
         <UnbalancedTag id="a" />
         <h1>yeeee</h1>
