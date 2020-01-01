@@ -1,14 +1,10 @@
 <template include="FancyHeader,test">
-    <h1>Normal Headers {{ test }}</h1>
+    <p>Hello, world!</p>
+    <h1>Normal Headers1 {{ ha.alpha }}</h1>
+    <h2>Normal Headers2 {{ test }}</h2>
+    <p>Hello</p>
     <FancyHeader>Fancy Header</FancyHeader>
-    <FancyHeader>Fancy Header {{ ha.alphaa }}</FancyHeader>
-    <test />
-    <div>
-        <UnbalancedTag id="a" />
-        <h1>yeeee</h1>
-    </div>
-    <!--Here's a comment -->
-
+    <!--Here's a comments -->
 </template>
 <style lang="sass">
     h1 {
@@ -22,4 +18,5 @@
 <script>
     console.log("ya")
     let v = 5;
+    console.log(v)
 </script>

@@ -1,8 +1,5 @@
 <template>
-    <h1>
-        Checker
-        <slot>Default Slot content</slot>
-    </h1>
+    <h1>Checker</h1>
 </template>
 
 <style lang="scss">
