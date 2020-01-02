@@ -1,10 +1,12 @@
 <template>
-    <h1>Checker</h1>
+    <h1>
+        <slot>Default Header</slot>
+    </h1>
 </template>
 
 <style lang="scss">
     h1 {
-        background: transparent;
+        color: rgb(26, 62, 131);
     }
 </style>
 

@@ -7,5 +7,7 @@ module.exports = {
 let projects = require("../db/projects")
 
 function index(req, res) {
-    app.render(res, "parser")
+    app.render(res, "parser", {
+        test: "bitch"
+    })
 }

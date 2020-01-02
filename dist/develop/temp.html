@@ -1,35 +1,23 @@
 <html><head>
-    <title>parser</title>
-    <style>h1 {
-        background: orange;
-    }
-
-    body {
+    <title>demo</title>
+    <style>body {
         background: white;
     }
 
 h1 {
-        background: transparent;
+        color: rgb(26, 62, 131);
     }
 
 </style>
     </head>
-    <body><p>
-Hello, world!
-</p>
-<h1>
-Normal Headers1 h.alphaaa
-</h1>
-<h2>
-Normal Headers2 frank
+    <body><h2>
+Normal Headers2 brits
 </h2>
-<p>
-Hello
-</p>
 <FancyHeader>
-Fancy Header
 <h1>
-  Checker
+  <slot>
+    Fancy Header
+  </slot>
 </h1>
 </FancyHeader>
 <!--Here's a comments -->
@@ -37,6 +25,7 @@ Fancy Header
     <script>console.log("ya")
     let v = 5;
     console.log(v)
+
 
 </script>
     </body></html>
